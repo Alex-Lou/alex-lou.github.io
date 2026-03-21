@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login UI Demo | Ilya Alexeev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
   <link rel="stylesheet" href="index.css">
-  <title>HASH TECHIE OFFICIAL</title>
 </head>
 <body>
-    <section>
-        <div class="form-box">
-            <div class="form-value">
-                <form action="">
-                    <h2>Login</h2>
-                    <div class="inputbox">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required>
-                        <label for="">Email</label>
-                    </div>
-                    <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
-                        <label for="">Password</label>
-                    </div>
-                    <div class="forget">
-                        <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
-                      
-                    </div>
-                    <button>Log in</button>
-                    <div class="register">
-                        <p>Don't have a account <a href="#">Register</a></p>
-                    </div>
-                </form>
-            </div>
+  <section class="flex items-center justify-center min-h-screen w-full bg-cover bg-center bg-no-repeat px-4"
+           style="background-image: url('fox.png')">
+    <div class="relative w-full max-w-md bg-white/5 border border-white/20 rounded-2xl backdrop-blur-xl p-6 sm:p-10">
+      <h2 class="text-3xl font-semibold text-white text-center mb-8">Login</h2>
+      <form action="">
+        <div class="input-group relative mb-8 border-b-2 border-white/40">
+          <ion-icon name="mail-outline" class="absolute right-2 top-4 text-white text-lg"></ion-icon>
+          <input type="email" required
+                 class="w-full h-12 bg-transparent border-none outline-none text-white text-base px-1 pr-8 peer">
+          <label class="absolute top-1/2 left-1 -translate-y-1/2 text-white pointer-events-none transition-all duration-300 peer-focus:-top-1 peer-valid:-top-1 peer-focus:text-sm peer-valid:text-sm">
+            Email
+          </label>
         </div>
-    </section>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <div class="input-group relative mb-8 border-b-2 border-white/40">
+          <ion-icon name="lock-closed-outline" class="absolute right-2 top-4 text-white text-lg"></ion-icon>
+          <input type="password" required
+                 class="w-full h-12 bg-transparent border-none outline-none text-white text-base px-1 pr-8 peer">
+          <label class="absolute top-1/2 left-1 -translate-y-1/2 text-white pointer-events-none transition-all duration-300 peer-focus:-top-1 peer-valid:-top-1 peer-focus:text-sm peer-valid:text-sm">
+            Password
+          </label>
+        </div>
+        <div class="flex justify-between items-center text-white text-sm mb-6">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" class="accent-white">
+            Remember Me
+          </label>
+          <a href="#" class="text-white/70 hover:text-white transition-colors hover:underline">Forgot Password?</a>
+        </div>
+        <button type="submit"
+                class="w-full h-11 rounded-full bg-white text-black font-semibold text-base border-none cursor-pointer transition-all duration-300 hover:bg-white/80 hover:shadow-lg">
+          Log in
+        </button>
+        <p class="text-white/70 text-sm text-center mt-6">
+          Don't have an account?
+          <a href="#" class="text-white font-semibold hover:underline">Register</a>
+        </p>
+      </form>
+    </div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
