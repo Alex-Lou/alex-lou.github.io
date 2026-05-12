@@ -203,7 +203,7 @@
   // ═══════════════════════════════════════════
 
   var typingEl = document.getElementById('typingText');
-  var words = ['Developer', 'Designer', '2D Animator', 'Sound Designer', 'AI Builder', 'Pentester'];
+  var words = ['Senior Full Stack Dev', 'Tech Lead', 'Java Architect', 'Microservices Builder', 'Cross-Platform Dev', 'Sound Engineer', 'Pentester'];
   var wordIndex = 0;
   var charIndex = 0;
   var isDeleting = false;
