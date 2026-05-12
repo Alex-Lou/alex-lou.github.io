@@ -246,10 +246,10 @@
   }
 
   // ═══════════════════════════════════════════
-  // TILT EFFECT ON PROJECT CARDS
+  // TILT EFFECT ON PROJECT CARDS (skip experience headers)
   // ═══════════════════════════════════════════
 
-  var glowCards = document.querySelectorAll('.glow-card');
+  var glowCards = document.querySelectorAll('.glow-card:not(.exp-header)');
   glowCards.forEach(function (card) {
     card.addEventListener('mousemove', function (e) {
       var rect = card.getBoundingClientRect();
@@ -264,6 +264,38 @@
       card.style.transform = '';
     });
   });
+
+  // ═══════════════════════════════════════════
+  // EXPERIENCE TIMELINE ACCORDIONS
+  // ═══════════════════════════════════════════
+
+  function bindAccordion(headerSelector, itemSelector) {
+    document.querySelectorAll(headerSelector).forEach(function (header) {
+      header.addEventListener('click', function (e) {
+        e.preventDefault();
+        var item = header.closest(itemSelector);
+        if (!item) return;
+        var willOpen = !item.classList.contains('open');
+        item.classList.toggle('open', willOpen);
+        header.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+    });
+  }
+
+  bindAccordion('.exp-header', '.exp-item');
+  bindAccordion('.exp-sub-header', '.exp-sub-item');
+
+  // Auto-open the current role on first paint for a delicious entrance
+  var currentItem = document.querySelector('.exp-item-current');
+  if (currentItem) {
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        currentItem.classList.add('open');
+        var btn = currentItem.querySelector('.exp-header');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      }, 600);
+    });
+  }
 
   // ═══════════════════════════════════════════
   // SCROLL HANDLER
