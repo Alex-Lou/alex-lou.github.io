@@ -504,6 +504,88 @@ footer::before {
 }
 
 /* ═══════════════════════════════════════════════════
+   LANGUAGE SWITCHER (navbar)
+   ═══════════════════════════════════════════════════ */
+.lang-switcher {
+  z-index: 60;
+}
+
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(108, 99, 255, 0.06);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  color: rgba(229, 231, 235, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-toggle-btn:hover {
+  background: rgba(108, 99, 255, 0.14);
+  border-color: rgba(108, 99, 255, 0.4);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(108, 99, 255, 0.18);
+}
+.lang-toggle-btn[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+.lang-toggle-btn i {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 110px;
+  padding: 0.4rem;
+  margin: 0;
+  list-style: none;
+  background: rgba(10, 10, 24, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: 12px;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(108, 99, 255, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+  pointer-events: none;
+  transform-origin: top right;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.lang-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.lang-menu li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+  color: rgba(209, 213, 219, 0.85);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.lang-menu li:hover {
+  background: rgba(108, 99, 255, 0.12);
+  color: #fff;
+}
+.lang-menu li.active {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.22), rgba(0, 210, 255, 0.12));
+  color: #fff;
+  box-shadow: inset 0 0 0 1px rgba(108, 99, 255, 0.35);
+}
+
+/* ═══════════════════════════════════════════════════
    LANGUAGE CARDS
    ═══════════════════════════════════════════════════ */
 .lang-card {
