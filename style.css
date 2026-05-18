@@ -585,48 +585,27 @@ body.menu-open {
     inset 0 0 20px rgba(108, 99, 255, 0.05);
 }
 
-/* Small LinkedIn badge anchored to the hero name */
-.hero-linkedin-link {
+/* Hero social cluster - next to the "Available for work" status pill */
+.hero-social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  margin-top: 0.75rem;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: rgba(108, 99, 255, 0.06);
-  border: 1px solid rgba(108, 99, 255, 0.18);
-  color: rgba(229, 231, 235, 0.7);
-  font-size: 0.95rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  color: rgba(156, 163, 175, 0.85);
+  font-size: 0.85rem;
   text-decoration: none;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-tap-highlight-color: transparent;
 }
-.hero-linkedin-link:hover,
-.hero-linkedin-link:focus-visible {
-  background: rgba(0, 210, 255, 0.16);
-  border-color: rgba(0, 210, 255, 0.5);
+.hero-social-link:hover,
+.hero-social-link:focus-visible {
   color: #00d2ff;
+  background: rgba(0, 210, 255, 0.08);
   transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(0, 210, 255, 0.28);
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.18);
   outline: none;
-}
-@media (min-width: 640px) {
-  .hero-linkedin-link {
-    width: 42px;
-    height: 42px;
-    margin-top: 1rem;
-    font-size: 1.05rem;
-  }
-}
-@media (min-width: 1024px) {
-  .hero-linkedin-link {
-    width: 46px;
-    height: 46px;
-    margin-top: 1.5rem;
-    font-size: 1.15rem;
-  }
 }
 
 /* CV button - cyan-tinted to stand out from the primary accent buttons */

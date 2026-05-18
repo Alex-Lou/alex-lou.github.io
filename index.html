@@ -125,16 +125,18 @@
 
     <div class="relative z-10 max-w-6xl mx-auto px-6 pt-20 w-full">
       <div class="max-w-3xl">
-        <p class="status-online text-sm font-mono text-gray-400 mb-5" data-i18n="hero.status">Available for work</p>
-        <p class="text-accent font-mono font-medium text-sm mb-4 tracking-widest uppercase" data-i18n="hero.greeting">Hello, I'm</p>
-        <div class="flex items-start gap-4 sm:gap-6 mb-5">
-          <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] neon-title">
-            Ilya<br><span class="glow-accent">Alexeev</span>
-          </h1>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="hero-linkedin-link">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mb-5">
+          <p class="status-online text-sm font-mono text-gray-400" data-i18n="hero.status">Available for work</p>
+          <div class="hero-socials flex items-center gap-2">
+            <a href="https://github.com/Alex-Lou" target="_blank" rel="noopener" aria-label="GitHub" class="hero-social-link"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="hero-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:alex.guennad@gmail.com" aria-label="Email" class="hero-social-link"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
+        <p class="text-accent font-mono font-medium text-sm mb-4 tracking-widest uppercase" data-i18n="hero.greeting">Hello, I'm</p>
+        <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] mb-5 neon-title">
+          Ilya<br><span class="glow-accent">Alexeev</span>
+        </h1>
         <h2 class="font-mono text-gray-400 text-lg lg:text-xl mb-8">
           <span class="text-dark-500">&gt;</span> <span id="typingText" class="glow-cyan"></span><span class="text-accent animate-pulse">_</span>
         </h2>
@@ -151,10 +153,6 @@
           <a href="cv/Ilya-Alexeev-CV.pdf" download class="btn-cv inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-xl transition-all duration-300 hover:-translate-y-1">
             <i class="fas fa-file-arrow-down text-xs"></i> <span data-i18n="hero.cta_cv">Download CV</span>
           </a>
-        </div>
-        <div class="flex gap-6">
-          <a href="https://github.com/Alex-Lou" target="_blank" rel="noopener" aria-label="GitHub" class="text-gray-500 text-2xl transition-all duration-300 hover:text-accent hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(108,99,255,0.5)]"><i class="fab fa-github"></i></a>
-          <a href="mailto:alex.guennad@gmail.com" aria-label="Email" class="text-gray-500 text-2xl transition-all duration-300 hover:text-accent hover:-translate-y-1 hover:drop-shadow-[0_0_8px_rgba(108,99,255,0.5)]"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
     </div>
@@ -191,12 +189,19 @@
             <strong class="glow-accent font-semibold">Atos</strong>. Multilingual, hands-on, from
             legacy monoliths to modern microservices.
           </p>
-          <p class="text-gray-400 text-lg leading-relaxed mb-10" data-i18n-html="about.body2">
+          <p class="text-gray-400 text-lg leading-relaxed mb-6" data-i18n-html="about.body2">
             Disciplined on schedules and deliveries, flexible on the approach. Easy
             communication with clients, colleagues, anyone really. A bit of dry humor,
             always respectful, conscientious about the craft. On the side, a long-running
             obsession with <strong class="glow-cyan">futuristic and cyberpunk aesthetics</strong>
             that constantly bleeds into my game design and UI work.
+          </p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-10" data-i18n-html="about.body3">
+            On the front-end side: building <strong class="glow-accent">modern, fluid and
+            ergonomic interfaces</strong> tailored to real user needs, on top of
+            <strong class="glow-accent">Angular / React / Vue</strong>, with
+            <strong class="glow-accent">Tailwind CSS</strong>, modern style frameworks
+            and the right dose of hand-written CSS.
           </p>
           <div class="grid grid-cols-2 gap-4">
             <div class="lang-card glow-card rounded-xl p-4 sm:p-5 flex items-center gap-3 sm:gap-4 min-w-0">
