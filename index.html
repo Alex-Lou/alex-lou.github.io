@@ -54,28 +54,30 @@
         <li><a href="#contact" class="nav-link px-3 py-2 text-sm font-medium text-gray-400 rounded-lg transition-all hover:text-white hover:bg-white/5" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
-      <!-- Language switcher -->
-      <div class="lang-switcher relative ml-3">
-        <button id="langToggle" type="button" class="lang-toggle-btn" aria-expanded="false" aria-haspopup="listbox" aria-label="Change language">
-          <span id="langCurrentFlag" aria-hidden="true">🇬🇧</span>
-          <span id="langCurrentLabel" class="font-mono text-xs font-semibold tracking-wider">EN</span>
-          <i class="fas fa-chevron-down text-[0.55rem] ml-0.5"></i>
-        </button>
-        <ul id="langMenu" class="lang-menu" role="listbox" aria-label="Language options">
-          <li role="option" data-lang-option="en"><span aria-hidden="true">🇬🇧</span><span class="font-mono text-xs font-semibold tracking-wider">EN</span></li>
-          <li role="option" data-lang-option="fr"><span aria-hidden="true">🇫🇷</span><span class="font-mono text-xs font-semibold tracking-wider">FR</span></li>
-          <li role="option" data-lang-option="es"><span aria-hidden="true">🇪🇸</span><span class="font-mono text-xs font-semibold tracking-wider">ES</span></li>
-          <li role="option" data-lang-option="it"><span aria-hidden="true">🇮🇹</span><span class="font-mono text-xs font-semibold tracking-wider">IT</span></li>
-          <li role="option" data-lang-option="de"><span aria-hidden="true">🇩🇪</span><span class="font-mono text-xs font-semibold tracking-wider">DE</span></li>
-          <li role="option" data-lang-option="pt"><span aria-hidden="true">🇵🇹</span><span class="font-mono text-xs font-semibold tracking-wider">PT</span></li>
-        </ul>
-      </div>
+      <!-- Right cluster: language switcher + burger -->
+      <div class="flex items-center gap-2 sm:gap-3 ml-auto md:ml-0">
+        <div class="lang-switcher relative">
+          <button id="langToggle" type="button" class="lang-toggle-btn" aria-expanded="false" aria-haspopup="listbox" aria-label="Change language">
+            <span id="langCurrentFlag" aria-hidden="true">🇬🇧</span>
+            <span id="langCurrentLabel" class="font-mono text-xs font-semibold tracking-wider">EN</span>
+            <i class="fas fa-chevron-down text-[0.55rem] ml-0.5"></i>
+          </button>
+          <ul id="langMenu" class="lang-menu" role="listbox" aria-label="Language options">
+            <li role="option" data-lang-option="en"><span aria-hidden="true">🇬🇧</span><span class="font-mono text-xs font-semibold tracking-wider">EN</span></li>
+            <li role="option" data-lang-option="fr"><span aria-hidden="true">🇫🇷</span><span class="font-mono text-xs font-semibold tracking-wider">FR</span></li>
+            <li role="option" data-lang-option="es"><span aria-hidden="true">🇪🇸</span><span class="font-mono text-xs font-semibold tracking-wider">ES</span></li>
+            <li role="option" data-lang-option="it"><span aria-hidden="true">🇮🇹</span><span class="font-mono text-xs font-semibold tracking-wider">IT</span></li>
+            <li role="option" data-lang-option="de"><span aria-hidden="true">🇩🇪</span><span class="font-mono text-xs font-semibold tracking-wider">DE</span></li>
+            <li role="option" data-lang-option="pt"><span aria-hidden="true">🇵🇹</span><span class="font-mono text-xs font-semibold tracking-wider">PT</span></li>
+          </ul>
+        </div>
 
-      <button id="navToggle" class="burger-btn md:hidden" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-      </button>
+        <button id="navToggle" class="burger-btn md:hidden" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
     </div>
   </nav>
 
