@@ -3,9 +3,16 @@
    ═══════════════════════════════════════════════════ */
 
 /* --- Global Atmosphere --- */
-body {
+html {
   overflow-x: hidden;
+  max-width: 100vw;
+}
+body {
+  overflow-x: clip;
+  overscroll-behavior-x: none;
   background: #050510;
+  position: relative;
+  max-width: 100vw;
 }
 
 body::before {
@@ -241,9 +248,52 @@ nav, header, section, footer {
   box-shadow: 0 0 10px rgba(108, 99, 255, 0.1);
 }
 
-#navToggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-#navToggle.active span:nth-child(2) { opacity: 0; }
-#navToggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+/* New burger button (matches lang-toggle aesthetic) */
+.burger-btn {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 10px;
+  background: rgba(108, 99, 255, 0.06);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.burger-btn:hover,
+.burger-btn:focus-visible {
+  background: rgba(108, 99, 255, 0.14);
+  border-color: rgba(108, 99, 255, 0.4);
+  box-shadow: 0 0 14px rgba(108, 99, 255, 0.18);
+  outline: none;
+}
+.burger-btn.active {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.18), rgba(0, 210, 255, 0.1));
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.burger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s ease,
+              background 0.3s ease;
+}
+
+#navToggle.active .burger-bar { background: #00d2ff; box-shadow: 0 0 6px rgba(0, 210, 255, 0.6); }
+#navToggle.active .burger-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#navToggle.active .burger-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#navToggle.active .burger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .nav-links.open { right: 0 !important; }
 
