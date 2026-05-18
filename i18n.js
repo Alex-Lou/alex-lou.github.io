@@ -26,6 +26,7 @@
       'hero.tagline': 'Senior Full Stack Developer & Tech Lead - building scalable Java/Spring microservices, modern Angular/React UIs, and cross-platform Rust/Tauri apps.',
       'hero.cta_projects': 'View Projects',
       'hero.cta_contact': 'Get in Touch',
+      'hero.cta_cv': 'Download CV',
 
       'about.heading': 'About',
       'about.heading_accent': 'Me',
@@ -175,6 +176,7 @@
       'hero.tagline': 'Senior Full Stack Developer & Tech Lead - conception de microservices Java/Spring scalables, interfaces modernes Angular/React et applications cross-platform Rust/Tauri.',
       'hero.cta_projects': 'Voir mes projets',
       'hero.cta_contact': 'Me contacter',
+      'hero.cta_cv': 'Télécharger CV',
 
       'about.heading': 'À propos',
       'about.heading_accent': 'de moi',
@@ -324,6 +326,7 @@
       'hero.tagline': 'Senior Full Stack Developer & Tech Lead - construyendo microservicios escalables Java/Spring, UIs modernas Angular/React y aplicaciones multiplataforma Rust/Tauri.',
       'hero.cta_projects': 'Ver proyectos',
       'hero.cta_contact': 'Contactar',
+      'hero.cta_cv': 'Descargar CV',
 
       'about.heading': 'Sobre',
       'about.heading_accent': 'mí',
@@ -473,6 +476,7 @@
       'hero.tagline': 'Senior Full Stack Developer & Tech Lead - microservizi Java/Spring scalabili, UI moderne Angular/React e app cross-platform Rust/Tauri.',
       'hero.cta_projects': 'Vedi i progetti',
       'hero.cta_contact': 'Contattami',
+      'hero.cta_cv': 'Scarica CV',
 
       'about.heading': 'Chi',
       'about.heading_accent': 'sono',
@@ -622,6 +626,7 @@
       'hero.tagline': 'Senior Full Stack Developer & Tech Lead - skalierbare Java/Spring-Microservices, moderne Angular/React-UIs und plattformübergreifende Rust/Tauri-Anwendungen.',
       'hero.cta_projects': 'Projekte ansehen',
       'hero.cta_contact': 'Kontaktieren',
+      'hero.cta_cv': 'Lebenslauf laden',
 
       'about.heading': 'Über',
       'about.heading_accent': 'mich',
@@ -771,6 +776,7 @@
       'hero.tagline': 'Senior Full Stack Developer & Tech Lead - microsserviços Java/Spring escaláveis, UIs modernas Angular/React e apps multiplataforma Rust/Tauri.',
       'hero.cta_projects': 'Ver projetos',
       'hero.cta_contact': 'Falar comigo',
+      'hero.cta_cv': 'Descarregar CV',
 
       'about.heading': 'Sobre',
       'about.heading_accent': 'mim',
