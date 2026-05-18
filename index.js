@@ -214,6 +214,36 @@
     }
   });
 
+  // ═══════════════════════════════════════════
+  // CV DOWNLOAD - mini spinner feedback
+  // ═══════════════════════════════════════════
+  function bindCvSpinner() {
+    var buttons = document.querySelectorAll('a[href$=".pdf"][download]');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.dataset.dlBusy === '1') return;
+        var icon = btn.querySelector('i');
+        if (!icon) return;
+        btn.dataset.dlBusy = '1';
+        var originalClass = icon.className;
+        // Preserve any non-FontAwesome classes (sizes, colors, opacity)
+        var preserved = [];
+        for (var i = 0; i < icon.classList.length; i++) {
+          var c = icon.classList[i];
+          if (c !== 'fas' && c !== 'far' && c !== 'fab' && c !== 'fa-solid' && c.indexOf('fa-') !== 0) {
+            preserved.push(c);
+          }
+        }
+        icon.className = ('fas fa-spinner fa-spin ' + preserved.join(' ')).trim();
+        setTimeout(function () {
+          icon.className = originalClass;
+          delete btn.dataset.dlBusy;
+        }, 1800);
+      });
+    });
+  }
+  bindCvSpinner();
+
   function updateActiveLink() {
     var scrollPos = window.scrollY + 120;
     sections.forEach(function (section) {

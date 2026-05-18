@@ -159,6 +159,9 @@
       'contact.form.message': 'Your Message',
       'contact.send': 'Send Message',
 
+            'cert.desc.capgemini': 'Internal certifications &bull; Udemy &bull; Internal platforms',
+      'cert.desc.profile': 'Profile Software formations &bull; PluralSkills certifications',
+      'cert.desc.akkodis': 'Internal certifications &bull; Enterprise dev tracks',
       'footer.copy': '&copy; 2026 Ilya Alexeev. All rights reserved.'
     },
 
@@ -309,6 +312,9 @@
       'contact.form.message': 'Votre message',
       'contact.send': 'Envoyer le message',
 
+            'cert.desc.capgemini': 'Certifications internes &bull; Udemy &bull; Plateformes internes',
+      'cert.desc.profile': 'Formations Profile Software &bull; Certifications PluralSkills',
+      'cert.desc.akkodis': 'Certifications internes &bull; Parcours dev entreprise',
       'footer.copy': '&copy; 2026 Ilya Alexeev. Tous droits réservés.'
     },
 
@@ -459,6 +465,9 @@
       'contact.form.message': 'Tu mensaje',
       'contact.send': 'Enviar mensaje',
 
+            'cert.desc.capgemini': 'Certificaciones internas &bull; Udemy &bull; Plataformas internas',
+      'cert.desc.profile': 'Formaciones Profile Software &bull; Certificaciones PluralSkills',
+      'cert.desc.akkodis': 'Certificaciones internas &bull; Itinerarios de desarrollo empresarial',
       'footer.copy': '&copy; 2026 Ilya Alexeev. Todos los derechos reservados.'
     },
 
@@ -609,6 +618,9 @@
       'contact.form.message': 'Il tuo messaggio',
       'contact.send': 'Invia messaggio',
 
+            'cert.desc.capgemini': 'Certificazioni interne &bull; Udemy &bull; Piattaforme interne',
+      'cert.desc.profile': 'Formazione Profile Software &bull; Certificazioni PluralSkills',
+      'cert.desc.akkodis': 'Certificazioni interne &bull; Percorsi dev enterprise',
       'footer.copy': '&copy; 2026 Ilya Alexeev. Tutti i diritti riservati.'
     },
 
@@ -759,6 +771,9 @@
       'contact.form.message': 'Deine Nachricht',
       'contact.send': 'Nachricht senden',
 
+            'cert.desc.capgemini': 'Interne Zertifizierungen &bull; Udemy &bull; Interne Plattformen',
+      'cert.desc.profile': 'Profile Software Schulungen &bull; PluralSkills Zertifizierungen',
+      'cert.desc.akkodis': 'Interne Zertifizierungen &bull; Enterprise-Entwicklung',
       'footer.copy': '&copy; 2026 Ilya Alexeev. Alle Rechte vorbehalten.'
     },
 
@@ -909,6 +924,9 @@
       'contact.form.message': 'A tua mensagem',
       'contact.send': 'Enviar mensagem',
 
+            'cert.desc.capgemini': 'Certificações internas &bull; Udemy &bull; Plataformas internas',
+      'cert.desc.profile': 'Formações Profile Software &bull; Certificações PluralSkills',
+      'cert.desc.akkodis': 'Certificações internas &bull; Percursos dev empresarial',
       'footer.copy': '&copy; 2026 Ilya Alexeev. Todos os direitos reservados.'
     }
   };
