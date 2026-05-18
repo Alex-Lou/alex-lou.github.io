@@ -671,6 +671,39 @@ body.menu-open {
   transform: translateY(2px) scale(1.08);
 }
 
+/* CV download spinner - replaces the icon for ~2s after click */
+.btn-cv.is-downloading,
+.mobile-menu-cv.is-downloading {
+  pointer-events: none;
+}
+.btn-cv.is-downloading > i:first-child,
+.mobile-menu-cv.is-downloading > i:first-child {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.btn-cv.is-downloading > i:first-child::before,
+.mobile-menu-cv.is-downloading > i:first-child::before {
+  content: "" !important;
+  opacity: 0;
+}
+.btn-cv.is-downloading > i:first-child::after,
+.mobile-menu-cv.is-downloading > i:first-child::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(0, 210, 255, 0.2);
+  border-top-color: #00d2ff;
+  border-radius: 50%;
+  animation: cvSpinAnim 0.65s linear infinite;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.35);
+}
+@keyframes cvSpinAnim {
+  to { transform: rotate(360deg); }
+}
+
 /* --- Scroll Reveal --- */
 [data-reveal] {
   opacity: 0;
