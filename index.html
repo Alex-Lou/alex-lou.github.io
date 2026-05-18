@@ -72,7 +72,7 @@
           </ul>
         </div>
 
-        <button id="navToggle" class="burger-btn md:hidden" aria-label="Toggle navigation" aria-expanded="false">
+        <button id="navToggle" class="burger-btn md:hidden" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileMenu">
           <span class="burger-bar"></span>
           <span class="burger-bar"></span>
           <span class="burger-bar"></span>
@@ -80,6 +80,36 @@
       </div>
     </div>
   </nav>
+
+  <!-- ═══════════ MOBILE MENU (off-canvas) ═══════════ -->
+  <div id="mobileMenu" class="mobile-menu md:hidden" aria-hidden="true">
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+    <aside class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <div class="mobile-menu-header">
+        <span class="font-mono text-[0.7rem] text-gray-500 tracking-[0.3em] uppercase">// Menu</span>
+        <button id="mobileMenuClose" type="button" class="mobile-menu-close" aria-label="Close navigation">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mobile-menu-divider"></div>
+      <ul class="mobile-menu-list">
+        <li><a href="#hero"><i class="fas fa-house"></i><span data-i18n="nav.home">Home</span><i class="fas fa-chevron-right"></i></a></li>
+        <li><a href="#about"><i class="fas fa-user-astronaut"></i><span data-i18n="nav.about">About</span><i class="fas fa-chevron-right"></i></a></li>
+        <li><a href="#projects"><i class="fas fa-rocket"></i><span data-i18n="nav.projects">Projects</span><i class="fas fa-chevron-right"></i></a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i><span data-i18n="nav.skills">Skills</span><i class="fas fa-chevron-right"></i></a></li>
+        <li><a href="#experience"><i class="fas fa-briefcase"></i><span data-i18n="nav.experience">Experience</span><i class="fas fa-chevron-right"></i></a></li>
+        <li><a href="#contact"><i class="fas fa-paper-plane"></i><span data-i18n="nav.contact">Contact</span><i class="fas fa-chevron-right"></i></a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <p class="status-online text-xs font-mono text-gray-400" data-i18n="hero.status">Available for work</p>
+        <div class="mobile-menu-socials">
+          <a href="https://github.com/Alex-Lou" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:alex.guennad@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <!-- ═══════════ HERO ═══════════ -->
   <header id="hero" class="relative min-h-screen flex items-center overflow-hidden">

@@ -164,7 +164,9 @@
 
   var navbar = document.getElementById('navbar');
   var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var mobileMenuClose = document.getElementById('mobileMenuClose');
+  var mobileMenuBackdrop = mobileMenu ? mobileMenu.querySelector('.mobile-menu-backdrop') : null;
   var sections = document.querySelectorAll('section[id], header[id]');
   var navLinksList = document.querySelectorAll('.nav-link');
 
@@ -172,18 +174,44 @@
     navbar.classList.toggle('scrolled', window.scrollY > 50);
   }
 
-  navToggle.addEventListener('click', function () {
-    var willOpen = !navToggle.classList.contains('active');
-    navToggle.classList.toggle('active', willOpen);
-    navLinks.classList.toggle('open', willOpen);
-    navToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-  });
+  function openMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.add('open');
+    navToggle.classList.add('active');
+    navToggle.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('menu-open');
+  }
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('menu-open');
+  }
 
-  navLinks.querySelectorAll('.nav-link').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navToggle.classList.remove('active');
-      navLinks.classList.remove('open');
+  if (navToggle) {
+    navToggle.addEventListener('click', function () {
+      if (mobileMenu && mobileMenu.classList.contains('open')) closeMobileMenu();
+      else openMobileMenu();
     });
+  }
+  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+  if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+
+  // Close on link click inside the panel
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  }
+
+  // Escape closes
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+      closeMobileMenu();
+    }
   });
 
   function updateActiveLink() {
